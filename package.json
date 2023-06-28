@@ -1,0 +1,20 @@
+{
+  "name": "hello-world-calm-hall-d45d",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler publish",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "bson-objectid": "^2.0.4",
+    "cors": "^2.8.5",
+    "mongodb": "^5.6.0"
+  }
+}
