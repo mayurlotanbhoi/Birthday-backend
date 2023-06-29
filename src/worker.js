@@ -99,7 +99,7 @@ export default {
 			DataForUpdate['Month'] = month;
 
 			const { ID, ...otherAllData } = DataForUpdate;
-			const data = await getData('updateOne', { filter: { ID: ID } }, { update: { $set: otherAllData } });
+			const data = await getData('updateOne', { filter: { ID: ID } }, { update: { $set: {...otherAllData } });
 
 			return new Response(JSON.stringify(data), hd);
 		} else if (method == 'DELETE') {
