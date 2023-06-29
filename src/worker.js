@@ -93,6 +93,11 @@ export default {
 		} else if (method == 'PUT') {
 			// upadate document
 			const DataForUpdate = await request.json();
+             
+			const [day, month, year] = DataForUpdate.DOB.split('/');
+			DataForUpdate['Day'] = day;
+			DataForUpdate['Month'] = month;
+
 			const { ID, ...otherAllData } = DataForUpdate;
 			const data = await getData('updateOne', { filter: { ID: ID } }, { update: { $set: otherAllData } });
 
